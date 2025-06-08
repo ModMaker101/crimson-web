@@ -4,26 +4,19 @@
   <meta charset="UTF-8" />
   <title>Crimson Package Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
-  <!-- Anime.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
-
-  <header>
-    <h1 id="hero-title">Crimson Package Manager</h1>
-    <p>A blazing fast and modern package manager for Crimson.</p>
-  </header>
-
-  <nav>
+<nav>
+  <div class="nav-left">
+    <img src="logo.png" alt="Crimson Logo" class="nav-logo" />
+  </div>
+  <div class="nav-links">
     <a href="#features">Features</a>
     <a href="#installation">Installation</a>
     <a href="#docs">Documentation</a>
-  
-    <!-- Theme Toggle Switch -->
     <label class="theme-switch">
       <input type="checkbox" id="theme-toggle">
       <span class="slider">
@@ -31,8 +24,19 @@
         <i class="fas fa-sun"></i>
       </span>
     </label>
-  </nav>
-  
+  </div>
+  <button id="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+</nav>
+
+
+  <header>
+    <h1 id="hero-title">Crimson Package Manager</h1>
+    <p>A blazing fast and modern package manager for your custom programming language.</p>
+  </header>
+
+  <div id="particles-js"></div>
 
   <section id="features">
     <h2>Features</h2>
@@ -40,7 +44,6 @@
     <div class="feature-box"><i class="fas fa-box-open"></i> Easy package publishing</div>
     <div class="feature-box"><i class="fas fa-shield-alt"></i> Secure and sandboxed installs</div>
     <div class="feature-box"><i class="fas fa-puzzle-piece"></i> Plugin support</div>
-
     <h3 style="color:#ff4c4c; margin-top: 3rem;">Popular Packages</h3>
     <div class="pkg-grid">
       <button class="pkg-card">
@@ -69,7 +72,8 @@
   <section id="installation">
     <h2>Installation</h2>
     <p>To install Crimson, run the following command:</p>
-    <pre><code>curl -sSL https://crimson.sh/install.sh | bash</code></pre>
+    <pre><code>curl -sSL https://crimson.sh/install.sh 
+bash</code></pre>
   </section>
 
   <section id="docs">
@@ -87,7 +91,7 @@
     <p>© 2024 Crimson Package Manager. All rights reserved.</p>
   </footer>
 
-  <!-- External JS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
