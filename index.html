@@ -1,97 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Crimson Package Manager</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project Crimson</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+  }
+
+  .container {
+    max-width: 600px;
+    line-height: 1.6;
+    font-size: 1.5em;
+    user-select: none;
+  }
+
+  .glitch {
+    color: crimson;
+    position: relative;
+    animation: glitch-flicker 0.3s infinite alternate;
+  }
+
+  @keyframes glitch-flicker {
+    0% {
+      text-shadow: 1px 0 red, -1px 0 crimson;
+    }
+    100% {
+      text-shadow: 2px 0 crimson, -2px 0 red;
+    }
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 6px;
+    height: 1em;
+    background-color: red;
+    margin-left: 6px;
+    margin-bottom: 10px;
+    animation: blink 1s step-start infinite;
+    vertical-align: bottom;
+  }
+
+  @keyframes blink {
+    50% { background-color: transparent; }
+  }
+</style>
 </head>
 <body>
-<nav>
-  <div class="nav-left">
-    <img src="logo.png" alt="Crimson Logo" class="nav-logo" />
+  <div class="container">
+    <p>Project <span class="glitch">Crimson</span></p>
+    <p>Compiled in silence.</p>
+    <p>Code hidden within the shadows</p>
+    <p><span class="glitch">Await the signal</span><span class="cursor"></span></p>
   </div>
-  <div class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#installation">Installation</a>
-    <a href="#docs">Documentation</a>
-    <label class="theme-switch">
-      <input type="checkbox" id="theme-toggle">
-      <span class="slider">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-      </span>
-    </label>
-  </div>
-  <button id="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
-    <i class="fas fa-bars"></i>
-  </button>
-</nav>
-
-
-  <header>
-    <h1 id="hero-title">Crimson Package Manager</h1>
-    <p>A blazing fast and modern package manager for Crimson.</p>
-  </header>
-
-  <div id="particles-js"></div>
-
-  <section id="features">
-    <h2>Features</h2>
-    <div class="feature-box"><i class="fas fa-bolt"></i> Fast dependency resolution</div>
-    <div class="feature-box"><i class="fas fa-box-open"></i> Easy package publishing</div>
-    <div class="feature-box"><i class="fas fa-shield-alt"></i> Secure and sandboxed installs</div>
-    <div class="feature-box"><i class="fas fa-puzzle-piece"></i> Plugin support</div>
-    <h3 style="color:#ff4c4c; margin-top: 3rem;">Popular Packages</h3>
-    <div class="pkg-grid">
-      <button class="pkg-card">
-        <h4>redcore</h4>
-        <p>Core utilities for Crimson apps, including logging, config, and runtime helpers.</p>
-      </button>
-      <button class="pkg-card">
-        <h4>flame-ui</h4>
-        <p>A blazing fast UI toolkit for building reactive interfaces with ease.</p>
-      </button>
-      <button class="pkg-card">
-        <h4>ignite-db</h4>
-        <p>Lightweight embedded database with zero-config and fast queries.</p>
-      </button>
-      <button class="pkg-card">
-        <h4>ember-auth</h4>
-        <p>Authentication plugin with support for tokens, sessions, and OAuth.</p>
-      </button>
-      <button class="pkg-card">
-        <h4>crimson-linter</h4>
-        <p>Code quality and formatting tool to keep your packages clean and consistent.</p>
-      </button>
-    </div>
-  </section>
-
-  <section id="installation">
-    <h2>Installation</h2>
-    <p>To install Crimson, run the following command:</p>
-    <pre><code>curl -sSL https://crimson.sh/install.sh 
-bash</code></pre>
-  </section>
-
-  <section id="docs">
-    <h2>Documentation</h2>
-    <p>Crimson provides a simple CLI interface:</p>
-    <ul>
-      <li><code>crimson init</code> - Initialize a new project</li>
-      <li><code>crimson install &lt;package&gt;</code> - Install a package</li>
-      <li><code>crimson publish</code> - Publish your package</li>
-      <li><code>crimson config</code> - Configure settings</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2024 Crimson Package Manager. All rights reserved.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
